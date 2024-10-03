@@ -1,0 +1,43 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color:#762009;
+    height: 80px;
+    align-items: center;
+}
+
+
+.Navbar h1{
+    align-items: center;
+    color: white;
+    font-size: 35px;
+   margin-top: auto;
+   padding: 150px;
+}
+
+.Navbar .Cart {
+    background-color:#3F1200;
+    color: white;
+    padding: 12px 20px;
+    align-items: center;
+    
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+   
+    margin-right: 175px;
+    border-radius: 28px;
+    width: 250px;
+}
+
+.Navbar .Cart h3{
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    transition: background-color 0.3s ease;
+
+
+}
+
+/* .Navbar  */
