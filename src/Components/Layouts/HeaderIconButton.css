@@ -1,0 +1,28 @@
+.Navbar .Cart {
+    font: inherit;
+    background-color:#4d1601;
+    color: white;
+    padding: 12px 20px;
+    align-items: center;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    margin-right: 175px;
+    border-radius: 28px;
+    width: 250px;
+}
+
+.Navbar .Cart button{
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    transition: background-color 0.3s ease;
+
+
+}
+
+.Navbar .Cart button:hover,
+.Navbar .Cart button:active {
+  background-color: #2c0d00;
+}
