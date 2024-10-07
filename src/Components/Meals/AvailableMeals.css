@@ -1,58 +1,24 @@
-.meals-list{
-    background-color: white;
-    width: 800px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column  ;
-    left: 25%;
-    right: 0;
-    /* top: 0; */
-    bottom: -48%;
-    border-radius: 10px;
-    overflow-y: auto;
-    transition: transform 0.3s ease;
-
-   
-}
-
-
-.meals-list ul{
-    list-style-type: none;
-    padding: 0;
+.meals {
+    max-width: 60rem;
+    width: 90%;
+    margin: 2rem auto;
+    animation: meals-appear 1s ease-out forwards;
+  }
+  
+  .meals-list ul {
+    list-style: none;
     margin: 0;
-
-    
-}
-
-.meals-list ul li{
-    margin: 20px;
-    /* padding: 10px; */
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.meals-list ul li h3{
-    font-style: italic;
-    margin: 0;
-    font-size: 18px;
     padding: 0;
-}
-
-.meals-list ul li h3 p {
-    margin-bottom: 5px;
-    font-size: 16px;
-    padding: 0;
-}
-
-.price{
-    margin-top: 5px;
-    color: brown;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-
+  }
+  
+  @keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -1,4 +1,5 @@
 import "./AvailableMeals.css";
+import Card from "../UI/Card";
 
 const dummyMeals = [
   {
@@ -45,7 +46,9 @@ const AvailableMeals = () => {
   ));
   return (
     <div className="meals-list">
-      <ul>{mealsList}</ul>;
+      <Card>
+        <ul>{mealsList}</ul>;
+      </Card>
     </div>
   );
 };
