@@ -1,9 +1,9 @@
 import { RiShoppingCartFill } from "@remixicon/react";
 import "./HeaderIconButton.css";
 
-const HeaderIconButton = () => {
+const HeaderIconButton = (props) => {
   return (
-    <button className="Cart">
+    <button onClick={props.onCartClick} className="Cart">
       <RiShoppingCartFill className="icon" /> Your Cart{" "}
       <span className="cart-number">0</span>
     </button>

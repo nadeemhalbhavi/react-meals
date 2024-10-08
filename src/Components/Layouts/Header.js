@@ -3,7 +3,7 @@ import "./Header.css";
 import mealsImages from "../../assests/meals.jpg";
 import HeaderIconButton from "../../Components/Layouts/HeaderIconButton";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <React.Fragment>
       <nav className="Navbar">
@@ -11,7 +11,7 @@ const Header = () => {
           <h1>ReactMeals</h1>
         </div>
         <div>
-          <HeaderIconButton />
+          <HeaderIconButton onCartClick={props.onShowCart} />
         </div>
       </nav>
 
