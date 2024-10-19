@@ -7,17 +7,25 @@ import CartContext from "../../store/CartContext";
 const Cart = (props) => {
   const cartCtx = React.useContext(CartContext);
   let totalAmount = 0;
+  //For showing total amount in cart dropdown.
   cartCtx.items.forEach((item) => {
     totalAmount += item.price * item.quantity;
   });
+  //For displaying items in cart.
   const CartItem = (
     <ul className="cart-items">
       {cartCtx.items.map((item) => (
-        <li key={item.id}>
-          <div className="cart-items">
-            <span className="cart-name">Name : {item.name} </span>
-            <span className="cart-quantity"> Qty : {item.quantity} </span>{" "}
-            <span className="cart-price">Price : {item.price.toFixed(2)}</span>{" "}
+        <li className="cart-item" key={item.id}>
+          <div>
+            <h2>{item.name}</h2>
+            <div className="summary">
+              <span className="price">${item.price.toFixed(2)} </span>
+              <span className="amount">x {item.quantity}</span>
+            </div>
+          </div>
+          <div className="actions">
+            <button>-</button>
+            <button>+</button>
           </div>
         </li>
       ))}
@@ -28,7 +36,7 @@ const Cart = (props) => {
       {CartItem}
       <div className="total">
         <span>Total Amount</span>
-        <span>{totalAmount}</span>
+        <span>{totalAmount.toFixed(2)}</span>
       </div>
       <div className="actions">
         <button onClick={props.onClose} className="button--alt">
