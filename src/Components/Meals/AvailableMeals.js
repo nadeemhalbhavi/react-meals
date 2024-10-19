@@ -44,6 +44,7 @@ const AvailableMeals = () => {
   const mealsList = dummyMeals.map((meal) => (
     <MealItem
       key={meal.id}
+      id={meal.id}
       name={meal.dishName}
       description={meal.summary}
       price={meal.price}
@@ -52,7 +53,7 @@ const AvailableMeals = () => {
   return (
     <div className="meals-list">
       <Card>
-        <ul>{mealsList}</ul>;
+        <ul>{mealsList}</ul>
       </Card>
     </div>
   );
