@@ -6,11 +6,17 @@ import CartContext from "../../store/CartContext";
 
 const Cart = (props) => {
   const cartCtx = React.useContext(CartContext);
+
   let totalAmount = 0;
   //For showing total amount in cart dropdown.
   cartCtx.items.forEach((item) => {
     totalAmount += item.price * item.quantity;
   });
+  //For deleting items from cart.
+  const DeleteHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
+
   //For displaying items in cart.
   const CartItem = (
     <ul className="cart-items">
@@ -19,12 +25,18 @@ const Cart = (props) => {
           <div>
             <h2>{item.name}</h2>
             <div className="summary">
-              <span className="price">${item.price.toFixed(2)} </span>
+              <span className="price">${item.price} </span>
               <span className="amount">x {item.quantity}</span>
             </div>
           </div>
           <div className="actions">
-            <button>-</button>
+            <button
+              onClick={() => {
+                DeleteHandler(item.id);
+              }}
+            >
+              -
+            </button>
             <button>+</button>
           </div>
         </li>
